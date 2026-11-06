@@ -37,6 +37,7 @@ while rounds != 0:
         continue
     win_var = player_winner(rps_sequence[-1], rps_sequence[0])
     if win_var == 0:
+        clear()
         print('Tie!')
         continue
     elif win_var == 1:
