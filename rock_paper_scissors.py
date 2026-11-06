@@ -1,5 +1,8 @@
 # rock_paper_scissors
+import os
 import random
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def cpu_choose(choice):
     return choose(choice)
@@ -43,7 +46,8 @@ while rounds != 0:
         print('You lose this round!')
         cpu_score += 1
     rounds -= 1
-
+    clear()
+    print(f'Your score: {player_score}\nCPU score: {cpu_score}')
 if player_score > cpu_score:
     print('You win the game!')
 else:
